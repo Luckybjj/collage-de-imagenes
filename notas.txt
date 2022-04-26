@@ -1,0 +1,20 @@
+npm init -y
+npm install express --save
+npm install --save express-fileupload
+npm i --save body-parser
+const expressFileUpload = require('express-fileupload');
+
+.- paquete body-parser para la manipulación del payload enviado desde
+ una aplicación cliente.
+
+.- body-parser, un middleware que formateara el payload recibido en una
+ consulta HTTP a formato JSON.
+
+ .- Podremos acceder a los datos por medio de una propiedad “body” 
+ que se integrará dentro del objeto “request”
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
