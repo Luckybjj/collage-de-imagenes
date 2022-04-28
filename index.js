@@ -49,14 +49,6 @@ app.get("/collage", (req, res) => {
 
 })
 
-// Ruta GET "/deleteImg/:nombre" que recibe como parámetro el nombre de la imagen y la elimine al hacerle click.
-app.delete("/imagen/:nombre", (req, res) => {
-    const { nombre } = req.params;
-    fs.unlink(`${__dirname}/public/imagenes/${nombre}.jpg`, (err) => {
-        res.send(`Imagen ${nombre} fue eliminada con éxito`);
-    });
-});
-
 // Ruta GET "/deleteImg/:nombre" que recibe como parametro el nombre de la imagen y la elimine
 app.get("/deleteImg/:nombre", (req, res) => {
     const { nombre } = req.params;
